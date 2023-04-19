@@ -1,0 +1,405 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Croatian (Croatia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HRV)
+LANGUAGE LANG_CROATIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\IO_Util.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\IO_Util.ico"
+
+IDR_ACTIVE              ICON                    "res\\active.ico"
+
+IDR_NOTACTIVE           ICON                    "res\\notactive.ico"
+
+IDR_DISABLED            ICON                    "res\\disabled.ico"
+
+#endif    // Croatian (Croatia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Neutral) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 633, 345
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "I/O Utility [Main]"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Available programs to load:",IDC_STATIC,7,7,108,10
+    CONTROL         "",ID_PROGSTOLOAD,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,19,142,216
+    PUSHBUTTON      "Create new",ID_CREATENEW,7,239,69,17
+    PUSHBUTTON      "Update",ID_UPDATEPROGRAM,80,239,69,17
+    DEFPUSHBUTTON   "Load program",ID_LOADPROGRAM,7,259,141,19
+    PUSHBUTTON      "Delete program",ID_DELETEPROGRAM,7,281,69,15,NOT WS_TABSTOP
+    CONTROL         "Don't use any hardware (simulation)",ID_SIMULATEHW,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,301,140,10
+    LTEXT           "Available hardware to use:",IDC_STATIC,7,313,87,8
+    COMBOBOX        ID_AVAILABLEHARDWARE,7,324,139,17,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "COM port:",IDC_STATIC,158,288,48,8
+    COMBOBOX        ID_COMPORT,210,285,49,17,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Baud rate:",IDC_STATIC,263,288,55,8
+    COMBOBOX        ID_BAUDRATE,322,285,49,17,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Open serial port",ID_OPENSERIALPORT,373,284,71,15
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,157,306,289,1
+    LTEXT           "Time resolution:",IDC_STATIC,158,313,104,8
+    COMBOBOX        ID_GRAPHRESOLUTION,157,324,102,17,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Play",ID_PLAY,263,315,35,23
+    LTEXT           "Loop:",IDC_STATIC,303,313,28,8
+    EDITTEXT        IDC_EDIT2,301,324,32,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Stop",ID_STOP,336,315,35,23
+    PUSHBUTTON      "Pause",ID_PAUSE,373,315,35,23
+    PUSHBUTTON      "Resume",ID_RESUME,410,315,35,23
+    PUSHBUTTON      "Exit app",ID_CANCEL,557,323,69,15,NOT WS_TABSTOP
+    LTEXT           "",ID_TITLE,157,7,471,10
+END
+
+IDD_PLAYER_WINDOW DIALOGEX 0, 0, 83, 28
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    SCROLLBAR       IDC_SCROLLBAR1,0,0,59,10
+    CONTROL         "",ID_PROGRAM_PLAYER,"Static",SS_BLACKRECT,0,0,64,14
+    EDITTEXT        IDC_EDIT1,0,0,83,16,ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER
+    ICON            IDR_ACTIVE,ID_ACTIVE1,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT1,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS1,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE2,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT2,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS2,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE3,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT3,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS3,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE4,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT4,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS4,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE5,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT5,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS5,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE6,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT6,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS6,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE7,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT7,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS7,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    ICON            IDR_ACTIVE,ID_ACTIVE8,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_NOTACTIVE,ID_NONACT8,7,8,20,20,SS_REALSIZEIMAGE | NOT WS_VISIBLE,WS_EX_TRANSPARENT
+    ICON            IDR_DISABLED,ID_DIS8,7,8,20,20,SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+END
+
+IDD_NEWPROGRAM DIALOGEX 0, 0, 589, 381
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "I/O Utility [Create new program]"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Create new program:",IDC_STATIC,10,7,74,10
+    EDITTEXT        ID_PROGRAMNAME,86,6,206,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Create",ID_CREATEPROGRAM,302,5,74,15
+    PUSHBUTTON      "Reset",ID_RESETPROGRAM,385,5,74,15,WS_DISABLED
+    PUSHBUTTON      "Save to file",ID_SAVEPROGRAM,470,5,74,15,WS_DISABLED
+    LTEXT           "Select output:",IDC_STATIC,10,32,53,10
+    COMBOBOX        ID_CMBOUTPUT,10,44,43,12,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,69,32,1,55
+    LTEXT           "Start delay (ms):",IDC_STATIC,87,32,60,10
+    EDITTEXT        ID_STARTDELAY,149,30,64,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Duration (ms):",IDC_STATIC,87,46,52,10
+    EDITTEXT        ID_STARTDURATION,149,44,64,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "State:",IDC_STATIC,87,60,25,10
+    COMBOBOX        ID_STARTSTATE,149,59,64,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Create / change output",ID_CREATEOUTPUT,86,74,127,15,WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,231,33,1,54
+    LTEXT           "Select output signal:",IDC_STATIC,249,32,72,10
+    COMBOBOX        ID_INPUTSIGNAL,333,30,43,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Duration (ms):",IDC_STATIC,249,46,52,10
+    EDITTEXT        ID_SIGNALDURATION,312,44,64,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Modify:",IDC_STATIC,249,60,33,10
+    PUSHBUTTON      "Delete",ID_DELETESIGNAL,293,58,39,15,WS_DISABLED
+    PUSHBUTTON      "Ins. after",ID_INSERTSIGNALAFTER,337,58,39,15,WS_DISABLED
+    PUSHBUTTON      "Append signal to output",ID_APPENDSIGNAL,249,74,127,15,WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,397,35,1,52
+    LTEXT           "Add new input monitor:",IDC_STATIC,417,32,88,10
+    COMBOBOX        ID_INPUTMONITOR,501,30,43,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Action type:",IDC_STATIC,417,46,44,10
+    COMBOBOX        ID_TRIGERACTION,464,44,80,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Create action",ID_CREATEACTION,417,74,127,15,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,513,359,69,15
+    LTEXT           "Time resolution:",IDC_STATIC,7,364,58,8
+    COMBOBOX        ID_GRAPHRESOLUTION,69,362,96,17,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Program:",IDC_STATIC,417,60,33,10
+    COMBOBOX        ID_PROGRAM,451,59,93,12,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL
+    CONTROL         "Loop",ID_LOOP,"Button",BS_AUTOCHECKBOX | WS_DISABLED,549,60,30,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 626
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 338
+    END
+
+    IDD_PLAYER_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 75
+        TOPMARGIN, 8
+    END
+
+    IDD_NEWPROGRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 582
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 374
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "FileDescription", "I/O Utility"
+            VALUE "FileVersion", "1.0.0"
+            VALUE "InternalName", "IO_Util.exe"
+            VALUE "OriginalFilename", "IO_Util.exe"
+            VALUE "ProductName", "I/O Utility"
+            VALUE "ProductVersion", "1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MAIN DLGINIT
+BEGIN
+    ID_AVAILABLEHARDWARE, 0x403, 10, 0
+0x4f49, 0x4420, 0x7665, 0x6369, 0x0065, 
+    ID_AVAILABLEHARDWARE, 0x403, 7, 0
+0x6542, 0x7065, 0x7265, "\000" 
+    ID_BAUDRATE, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    ID_BAUDRATE, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    ID_BAUDRATE, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    ID_BAUDRATE, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    ID_BAUDRATE, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    ID_BAUDRATE, 0x403, 7, 0
+0x3332, 0x3430, 0x3030, "\000" 
+    ID_GRAPHRESOLUTION, 0x403, 16, 0
+0x3032, 0x6d20, 0x6c69, 0x696c, 0x6573, 0x6f63, 0x646e, 0x0073, 
+    ID_GRAPHRESOLUTION, 0x403, 9, 0
+0x2031, 0x6573, 0x6f63, 0x646e, "\000" 
+    0
+END
+
+IDD_NEWPROGRAM DLGINIT
+BEGIN
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0031, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0032, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0033, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0034, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0035, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0036, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0037, 
+    ID_CMBOUTPUT, 0x403, 2, 0
+0x0038, 
+    ID_STARTSTATE, 0x403, 3, 0
+0x4e4f, "\000" 
+    ID_STARTSTATE, 0x403, 4, 0
+0x464f, 0x0046, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0031, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0032, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0033, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0034, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0035, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0036, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0037, 
+    ID_INPUTMONITOR, 0x403, 2, 0
+0x0038, 
+    ID_TRIGERACTION, 0x403, 8, 0
+0x6944, 0x6173, 0x6c62, 0x0065, 
+    ID_TRIGERACTION, 0x403, 14, 0
+0x6150, 0x7375, 0x2065, 0x7270, 0x676f, 0x6172, 0x006d, 
+    ID_TRIGERACTION, 0x403, 13, 0
+0x7453, 0x706f, 0x7020, 0x6f72, 0x7267, 0x6d61, "\000" 
+    ID_TRIGERACTION, 0x403, 15, 0
+0x7453, 0x7261, 0x2074, 0x7270, 0x676f, 0x6172, 0x3a6d, "\000" 
+    ID_TRIGERACTION, 0x403, 24, 0
+0x6553, 0x2074, 0x756f, 0x7074, 0x7475, 0x2073, 0x6f74, 0x3020, 0x2620, 
+0x7320, 0x6f74, 0x0070, 
+    ID_TRIGERACTION, 0x403, 24, 0
+0x6553, 0x2074, 0x756f, 0x7074, 0x7475, 0x2073, 0x6f74, 0x3120, 0x2620, 
+0x7320, 0x6f74, 0x0070, 
+    ID_TRIGERACTION, 0x403, 5, 0
+0x6542, 0x7065, "\000" 
+    ID_TRIGERACTION, 0x403, 14, 0
+0x754a, 0x7473, 0x6920, 0x646e, 0x6369, 0x7461, 0x0065, 
+    ID_GRAPHRESOLUTION, 0x403, 16, 0
+0x3032, 0x6d20, 0x6c69, 0x696c, 0x6573, 0x6f63, 0x646e, 0x0073, 
+    ID_GRAPHRESOLUTION, 0x403, 9, 0
+0x2031, 0x6573, 0x6f63, 0x646e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MAIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // English (Neutral) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\IO_Util.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
